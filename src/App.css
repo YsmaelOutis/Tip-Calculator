@@ -1,13 +1,3 @@
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type=number] {
-  color: hsl(183, 100%, 15%);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -89,6 +79,16 @@ main .bill input:focus:not(.error), main .number-of-people input:focus:not(.erro
 main .bill input.error, main .bill input:focus.error, main .number-of-people input.error, main .number-of-people input:focus.error {
   outline: 2px solid hsl(9, 70%, 55%);
 }
+main .bill input[type=number]::-webkit-inner-spin-button,
+main .bill input[type=number]::-webkit-outer-spin-button, main .number-of-people input[type=number]::-webkit-inner-spin-button,
+main .number-of-people input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main .bill input[type=number], main .number-of-people input[type=number] {
+  -moz-appearance: textfield;
+  color: hsl(183, 100%, 15%);
+}
 main .bill img, main .number-of-people img {
   position: relative;
   left: 10%;
@@ -127,6 +127,15 @@ main .select-tip .buttons-container button#custom:focus, main .select-tip .butto
 main .select-tip .buttons-container button.is-selected, main .select-tip .buttons-container input.is-selected {
   color: hsl(183, 100%, 15%);
   background-color: hsl(172, 67%, 45%);
+}
+main .select-tip .buttons-container input[type=number]::-webkit-inner-spin-button,
+main .select-tip .buttons-container input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main .select-tip .buttons-container input[type=number] {
+  -moz-appearance: textfield;
+  color: hsl(183, 100%, 15%);
 }
 main .number-of-people {
   margin-top: 2rem;

@@ -9,16 +9,6 @@ $white: hsl(0, 0%, 100%);
 $errorRed: hsl(9, 70%, 55%);
 
 
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-input[type=number] {
-    color: $very-dark-cyan;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -110,6 +100,17 @@ main {
             } 
         }
 
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance:textfield;
+            color: $very-dark-cyan;
+        }
+
         img {
             position: relative;
             left: 10%;
@@ -151,12 +152,22 @@ main {
                     }
                 }
 
-
                 &.is-selected {
                     color: $very-dark-cyan;
                     background-color: $strong-cyan;
                 }
-            }           
+            }
+            
+            input[type=number]::-webkit-inner-spin-button,
+            input[type=number]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            input[type=number] {
+                -moz-appearance:textfield;
+                color: $very-dark-cyan;
+            }          
         }
     }
 

@@ -1,0 +1,272 @@
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  color: hsl(183, 100%, 15%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+#root {
+  height: 100dvh;
+  width: 100dvw;
+  text-align: center;
+  background-color: hsl(185, 41%, 84%);
+}
+
+#root > h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(186, 14%, 43%);
+  letter-spacing: 0.5rem;
+  height: 15%;
+}
+
+main {
+  height: 85%;
+  background-color: #fff;
+  border-radius: 1rem 1rem 0 0;
+  text-align: left;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+main .bill div, main .number-of-people div {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+main .bill div::before, main .number-of-people div::before {
+  content: url(./icon-dollar.svg);
+  position: absolute;
+  bottom: -120%;
+  left: 1rem;
+}
+main .bill div label, main .number-of-people div label {
+  display: inline;
+  color: hsl(186, 14%, 43%);
+  margin-bottom: 0.25rem;
+}
+main .bill div p, main .number-of-people div p {
+  display: inline;
+  color: hsl(9, 70%, 55%);
+}
+main .bill input, main .number-of-people input {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 6px;
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+  text-align: right;
+  color: hsl(183, 100%, 15%);
+  font-family: inherit;
+  font-size: 2rem;
+  padding-right: 1rem;
+}
+main .bill input::-moz-placeholder, main .number-of-people input::-moz-placeholder {
+  color: hsl(183, 100%, 15%);
+  opacity: 0.3;
+}
+main .bill input::placeholder, main .number-of-people input::placeholder {
+  color: hsl(183, 100%, 15%);
+  opacity: 0.3;
+}
+main .bill input:focus:not(.error), main .number-of-people input:focus:not(.error) {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+main .bill input.error, main .bill input:focus.error, main .number-of-people input.error, main .number-of-people input:focus.error {
+  outline: 2px solid hsl(9, 70%, 55%);
+}
+main .bill img, main .number-of-people img {
+  position: relative;
+  left: 10%;
+  top: 24%;
+}
+main .select-tip {
+  margin-top: 2rem;
+}
+main .select-tip h4 {
+  display: block;
+  color: hsl(186, 14%, 43%);
+  margin-bottom: 0.25rem;
+}
+main .select-tip .buttons-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+main .select-tip .buttons-container button, main .select-tip .buttons-container input {
+  height: 3rem;
+  width: 100%;
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+}
+main .select-tip .buttons-container button#custom, main .select-tip .buttons-container input#custom {
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(184, 14%, 56%);
+  text-align: center;
+}
+main .select-tip .buttons-container button#custom:focus, main .select-tip .buttons-container input#custom:focus {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+main .select-tip .buttons-container button.is-selected, main .select-tip .buttons-container input.is-selected {
+  color: hsl(183, 100%, 15%);
+  background-color: hsl(172, 67%, 45%);
+}
+main .number-of-people {
+  margin-top: 2rem;
+}
+main .number-of-people div::before {
+  content: url(./icon-person.svg);
+  position: absolute;
+  bottom: -120%;
+  left: 1rem;
+}
+main .total {
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  background-color: hsl(183, 100%, 15%);
+  text-align: center;
+}
+main .total .tip-amount, main .total .total-amount {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+main .total .tip-amount p, main .total .total-amount p {
+  text-align: left;
+  font-size: 0.75rem;
+  color: hsl(186, 14%, 43%);
+}
+main .total .tip-amount span, main .total .total-amount span {
+  font-size: 2rem;
+  color: hsl(172, 67%, 45%);
+}
+main .total button {
+  background-color: hsl(172, 67%, 45%);
+  border: none;
+  width: 100%;
+  border-radius: 5px;
+  height: 3rem;
+  margin-top: 1.25rem;
+  font-size: 1.5rem;
+  color: hsl(183, 100%, 15%);
+}
+
+@media (width > 1024px) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #root > h1 {
+    font-size: 3rem;
+    letter-spacing: 1rem;
+    margin: 2rem 0;
+  }
+  main {
+    display: flex;
+    flex-direction: row;
+    height: 70%;
+    width: 70%;
+    border-radius: 1rem;
+    padding: 3rem;
+  }
+  main .desktop-division {
+    width: 50%;
+  }
+  main .forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-right: 3rem;
+  }
+  main .forms .bill label, main .forms .number-of-people label {
+    margin-bottom: 0.5rem;
+  }
+  main .forms .bill input, main .forms .number-of-people input {
+    height: 3rem;
+  }
+  main .forms .select-tip h4 {
+    margin-bottom: 0.5rem;
+  }
+  main .forms .select-tip .buttons-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  main .forms .select-tip .buttons-container button {
+    cursor: pointer;
+    height: 4rem;
+    transition: all 0.2s ease-in-out;
+  }
+  main .forms .select-tip .buttons-container button:hover {
+    background-color: hsl(169, 80%, 75%);
+  }
+  main .forms .select-tip .buttons-container #custom {
+    margin-top: 0;
+    height: 4rem;
+  }
+  main .total {
+    margin-top: 0;
+    padding: 3rem 2rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  main .total .tip-amount h4, main .total .total-amount h4 {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+  main .total .tip-amount p, main .total .total-amount p {
+    font-size: 1rem !important;
+  }
+  main .total .tip-amount span, main .total .total-amount span {
+    font-size: 2rem;
+  }
+  main .total .total-amount {
+    margin-top: 2rem;
+  }
+  main .total button {
+    cursor: pointer;
+    height: 4rem;
+    transition: all 0.2s ease-in-out;
+  }
+  main .total button:hover {
+    background-color: hsl(169, 80%, 75%);
+  }
+}
+@media (width > 1450px) {
+  #root > h1 {
+    margin: 3rem 0;
+  }
+  main {
+    height: 60%;
+    width: 60%;
+  }
+  span {
+    font-size: 3rem !important;
+  }
+}
+@media (width <= 340px) {
+  main .total .total-amount span, main .total .tip-amount span {
+    font-size: 1.5rem;
+  }
+}/*# sourceMappingURL=App.css.map */
